@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HomeLogoComponent } from '../home-logo/home-logo.component';
 
 @Component({
   selector: 'app-root',
