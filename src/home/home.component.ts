@@ -35,7 +35,7 @@ export class HomeComponent {
     name: 'Vikram Singh',
     role: 'Student',
     comment: 'Affordable and fast! My hard disk crash recovery was smooth.',
-    image: 'assets/HardDisk Crack.jpg'
+    image: 'assets/HardDisk-Crack.jpg'
   }
 ];
 
