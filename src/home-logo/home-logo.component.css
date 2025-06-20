@@ -1,41 +1,51 @@
-/* Navbar Top Color */
+/* Top Background */
 .top {
   background-color: rgb(230, 143, 239);
 }
+
 body {
-  padding-top: 80px;
+  padding-top: 100px; /* to avoid overlap with fixed navbar */
 }
 
-/* Logo Styling */
+/* Logo Text Styles */
 .anandh-logo {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
-  color: #2c3e50;
+  color: #0d35e8;
   text-transform: uppercase;
+  text-shadow: 1px 1px 6px #000000;
+  letter-spacing: 0.3rem;
 }
 
-.anandh-logo span {
-  display: inline-block;
-  transition: transform 0.3s ease;
+.an-text {
+  position: relative;
+  top: 5px;
+}
+.and-text {
+  position: relative;
+  top: -5px;
+}
+.tech-text {
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
 }
 
-
-/* Hardware Service Text */
+/* Tagline */
 .hardware-text {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #6c757d;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
+  margin: 0;
 }
-
 .hardware-text .highlight {
   color: #dc3545;
   font-style: italic;
 }
 
-/* Active Link Styling */
+/* Active Link */
 .nav-link.active-link {
   border-bottom: 3px solid blue;
   color: #0d6efd !important;

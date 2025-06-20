@@ -17,6 +17,6 @@ export class DellComponent {
     'assets/dell2.jpg',
     'assets/dell3.jpg',
     'assets/dell4.jpg',
-    'assets/dell5.webp'
+    'assets/dell5.jpg'
   ];
 }

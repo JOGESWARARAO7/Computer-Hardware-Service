@@ -1,72 +1,62 @@
-<nav class="navbar navbar-expand-lg bg-light shadow-sm top fixed-top">
-
+<nav class="navbar navbar-expand-lg bg-light shadow-sm fixed-top top">
   <div class="container-fluid">
 
-    <!-- Logo & Title -->
-    <a class="navbar-brand d-flex flex-column align-items-start" routerLink="/">
-      <h1 class="anandh-logo m-0">
-        <span id="A-letter">A</span><span>N</span><span>A</span><span>N</span><span>D</span><span>H</span>
-      </h1>
-      <p class="hardware-text mt-1">
-        Hardware <span class="highlight">Service</span>
-      </p>
+    <!-- LOGO + COMPANY NAME (Always visible) -->
+    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
+      <img src="assets/AT Logo Center.jpg" alt="logo" width="60" height="60" class="rounded-circle">
+      <div class="d-none d-lg-block"> <!-- Visible only on desktop -->
+        <h1 class="anandh-logo mb-0">
+          <span class="an-text">AN</span><span class="and-text">AND</span>
+          <span class="tech-text">Technologies</span>
+        </h1>
+        <p class="hardware-text mb-0">
+         Computer Hardware <span class="highlight">Service</span>
+        </p>
+      </div>
     </a>
 
-    <!-- Toggle Button for Mobile -->
+    <!-- TOGGLE Button for Mobile -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar Links -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+    <!-- COLLAPSIBLE CONTENT -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Mobile Company Name (Hidden on large screens) -->
+      <div class="d-lg-none text-center my-2">
+        <h1 class="anandh-logo mb-0">
+          <span class="an-text">AN</span><span class="and-text">AND</span>
+          <span class="tech-text">Technologies</span>
+        </h1>
+        <p class="hardware-text mb-2">
+         Computer Hardware <span class="highlight">Service</span>
+        </p>
+      </div>
+
+      <!-- NAV LINKS -->
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/HomePage" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/About" routerLinkActive="active-link">About</a>
-        </li>
-
-        <!-- SERVICES Dropdown -->
+        <li class="nav-item"><a class="nav-link" routerLink="/HomePage" routerLinkActive="active-link">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/About" routerLinkActive="active-link">About</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Services</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Laptop Chiplevel</a></li>
-            <li><a class="dropdown-item" href="#">Desktop Chiplevel</a></li>
-            <li><a class="dropdown-item" href="#">All in one system</a></li>
-            <li><a class="dropdown-item" href="#">Hard disk Repairing</a></li>
-            <li><a class="dropdown-item" href="#">Data Recovery</a></li>
-            <li><a class="dropdown-item" href="#">Printer Repairs</a></li>
-            <li><a class="dropdown-item" href="#">Networking Issues</a></li>
-            <li><a class="dropdown-item" href="#">CCtv Installation</a></li>
-            <li><a class="dropdown-item" href="#">Power Problems</a></li>
+            <li><a class="dropdown-item" routerLink="/laptopchiplevel">Laptop Chiplevel</a></li>
+            <!-- <li><a class="dropdown-item" href="#">Desktop Chiplevel</a></li> -->
+            <li><a class="dropdown-item" routerLink="/datarecovery">Data Recovery</a></li>
+            <!-- Add more services -->
           </ul>
         </li>
-
-        <!-- BRANDS Dropdown -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" routerLinkActive="active-link" data-bs-toggle="dropdown">Brands</a>
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Brands</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" routerLink="/dell" routerLinkActive="active-link">Dell</a></li>
-            <li><a class="dropdown-item" href="#">Lenova</a></li>
-            <li><a class="dropdown-item" href="#">Hp</a></li>
-            <li><a class="dropdown-item" href="#">Acer</a></li>
-            <li><a class="dropdown-item" href="#">Toshiba</a></li>
-            <li><a class="dropdown-item" href="#">Samsung</a></li>
-            <li><a class="dropdown-item" href="#">Apple</a></li>
-            <li><a class="dropdown-item" href="#">Mac Book</a></li>
+            <li><a class="dropdown-item" routerLink="/dell">Dell</a></li>
+            <li><a class="dropdown-item" routerLink="/hp">HP</a></li>
+            <!-- Add more brands -->
           </ul>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active-link">Contact Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/repair" routerLinkActive="active-link">Repair Service</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" routerLink="/contact" routerLinkActive="active-link">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/repairService" routerLinkActive="active-link">Repair Service</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-

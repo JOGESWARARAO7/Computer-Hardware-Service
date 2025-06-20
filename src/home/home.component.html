@@ -2,7 +2,8 @@
 <!-- Hero / Banner Section -->
 <!-- Hero / Banner Section -->
 <div class="container-fluid bg-light py-5 text-center hero-section">
-  <h2 class="display-5 fw-bold">Dell Laptop Service Centre</h2>
+  <h2 class="display-5 fw-bold">Laptop&#39;s Service Centre</h2>
+
   <p class="lead px-3">
     Our Dell Service Centre is a leading Dell Laptop Service provider with over 10 years of experience, certified technicians, and 100% guaranteed laptop repair services.
   </p>
@@ -28,7 +29,7 @@
 
     <div class="col-md-6">
       <div class="card h-100 shadow">
-        <img src="assets/computer hardware.webp" class="card-img-top" alt="Hardware Service">
+        <img src="assets/computer hardware.jpg" class="card-img-top" alt="Hardware Service">
         <div class="card-body">
           <h5 class="card-title">Dell Hardware Repair</h5>
           <p class="card-text">
@@ -47,7 +48,7 @@
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
     <div class="col">
       <div class="card h-100 shadow-sm">
-        <img src="assets/screenreplace.avif" class="card-img-top" alt="Screen Replacement">
+        <img src="assets/screenreplace.jpg" class="card-img-top" alt="Screen Replacement">
         <div class="card-body">
           <h5 class="card-title">Laptop Screen Replacement</h5>
           <p class="card-text">
@@ -59,7 +60,7 @@
 
     <div class="col">
       <div class="card h-100 shadow-sm">
-        <img src="assets/booting.webp" class="card-img-top" alt="Booting Problem">
+        <img src="assets/booting.jpg" class="card-img-top" alt="Booting Problem">
         <div class="card-body">
           <h5 class="card-title">Booting Problems</h5>
           <p class="card-text">
@@ -83,7 +84,7 @@
 
     <div class="col">
       <div class="card h-100 shadow-sm">
-        <img src="assets/software-problems.avif" class="card-img-top" alt="Software Problem">
+        <img src="assets/software-problems.jpg" class="card-img-top" alt="Software Problem">
         <div class="card-body">
           <h5 class="card-title">Software Problems</h5>
           <p class="card-text">
@@ -107,8 +108,42 @@
   </div>
 </div>
 
+<!-- Client Satisfaction Section -->
+<div class="container py-5">
+  <h3 class="text-primary mb-4 text-center">Client Satisfaction</h3>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let review of displayedReviews">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <img src="{{ review.image }}" class="rounded-circle mb-3" width="80" height="80" alt="Client">
+          <h5 class="card-title">{{ review.name }}</h5>
+          <p class="text-muted mb-2">{{ review.role }}</p>
+          <p class="card-text"><i class="bi bi-quote"></i> {{ review.comment }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="d-flex justify-content-center mt-4">
+    <ul class="pagination">
+      <li class="page-item" [class.disabled]="currentPage === 1">
+        <a class="page-link" (click)="changePage(currentPage - 1)">Previous</a>
+      </li>
+      <li class="page-item" *ngFor="let page of totalPagesArray; let i = index" [class.active]="i + 1 === currentPage">
+        <a class="page-link" (click)="changePage(i + 1)">{{ i + 1 }}</a>
+      </li>
+      <li class="page-item" [class.disabled]="currentPage === totalPages">
+        <a class="page-link" (click)="changePage(currentPage + 1)">Next</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
 <!-- Support Section -->
-<div class="container-fluid bg-secondary text-white text-center  mt-2">
+<div class="container-fluid bg-secondary text-white text-center  mt-1">
   <div class="container">
     <div class="mb-4">
       <i class="fa-solid fa-headset fa-3x mb-3"></i>
@@ -139,7 +174,7 @@
 <!-- Footer -->
 <footer class="bg-dark text-light py-4 text-center">
   <div class="container">
-    <p class="mb-1">© 2025 Dell Service Center. All rights reserved.</p>
+    <p class="mb-1">© 2025 Computer Service Centre. All rights reserved.</p>
     <p class="small">Crafted with ❤️ by laplabs</p>
   </div>
 </footer>

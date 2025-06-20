@@ -1,1 +1,28 @@
-<p>hp works!</p>
+<app-home-logo></app-home-logo>
+
+<div class="container-fluid bg-light py-5 text-center hero-section">
+  <h2 class="display-5 fw-bold">HP Laptop Service</h2>
+  <p class="lead px-3">
+    Our HP Service Centre is a leading HP Laptop Service provider with over 10 years of experience, certified technicians, and 100% guaranteed laptop repair services.
+  </p>
+</div>
+
+<!-- Card Section -->
+<div class="container mb-5">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let img of imageList">
+      <div class="card h-100 shadow-sm">
+        <img [src]="img" class="card-img-top" alt="Dell Laptop">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-4 text-center">
+  <div class="container">
+    <p class="mb-1">© 2025 HP Loptop Service Center. All rights reserved.</p>
+    <p class="small">Crafted with ❤️ by laplabs</p>
+  </div>
+</footer>

@@ -5,6 +5,10 @@ import { HomeComponent } from '../home/home.component';
 import { AboutComponent } from './about/about.component';
 import { DellComponent } from '../Brand/dell/dell.component';
 import { ContactComponent } from '../contact/contact.component';
+import { RepairServiceComponent } from './repair-service/repair-service.component';
+import { HpComponent } from '../Brand/hp/hp.component';
+import { LaptopChiplevelComponent } from '../services/laptop-chiplevel/laptop-chiplevel.component';
+import { DatarecoveryComponent } from '../services/datarecovery/datarecovery.component';
 
 export const routes: Routes = [
 
@@ -37,5 +41,24 @@ export const routes: Routes = [
      {
         path:"contact",
         component:ContactComponent
+    }
+    ,
+    {
+        path:"repairService",
+        component:RepairServiceComponent
+    },
+    {
+        path:"hp",
+        component:HpComponent
+    },
+    {
+        path:"laptopchiplevel",
+        component:LaptopChiplevelComponent
+
+    },
+    {
+        path:"datarecovery",
+        component:DatarecoveryComponent
+
     }
 ];
